@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sashan Fernando | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    
+
+
 </head>
 <body>
 <header>
     <div class="container nav-container">
         <!-- <a href="#" class="logo">SF</a> -->
-        <img src="logo4.png" alt="Sashan Fernando" class="logo" />
+        <img src="logo.png" alt="Sashan Fernando" class="logo" />
         <nav>
             <div class="nav-links">
                 <a href="#hero" class="nav-link">Home</a>
@@ -569,22 +572,23 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-form-container animate">
-                <form class="contact-form">
-                    <div class="form-group">
+                <form class="contact-form" action="https://formspree.io/f/mgvyedvp" method="POST">
+
+                <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" class="form-input" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" class="form-textarea" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
@@ -593,20 +597,59 @@
     </section>
 </main>
 
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <p class="footer-text">Let's connect and build something amazing together!</p>
-            <div class="footer-links">
-                <a href="#hero" class="footer-link">Home</a>
-                <a href="#about" class="footer-link">About</a>
-                <a href="#skills" class="footer-link">Skills</a>
-                <a href="#projects" class="footer-link">Projects</a>
-                <a href="#education" class="footer-link">Education</a>
-                <a href="#contact" class="footer-link">Contact</a>
-            </div>
-            <p class="copyright">© 2025 Sashan Fernando. All rights reserved.</p>
+<!--<footer>-->
+<!--    <div class="container">-->
+<!--        <div class="footer-content">-->
+<!--            <p class="footer-text">Let's connect and build something amazing together!</p>-->
+<!--            <div class="footer-links">-->
+<!--                <a href="#hero" class="footer-link">Home</a>-->
+<!--                <a href="#about" class="footer-link">About</a>-->
+<!--                <a href="#skills" class="footer-link">Skills</a>-->
+<!--                <a href="#projects" class="footer-link">Projects</a>-->
+<!--                <a href="#education" class="footer-link">Education</a>-->
+<!--                <a href="#contact" class="footer-link">Contact</a>-->
+<!--            </div>-->
+<!--            <p class="copyright">© 2025 Sashan Fernando. All rights reserved.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
+<footer class="footer-section">
+    <div class="container footer-container">
+        <div class="footer-left">
+            <img src="logo.png" alt="Sashan Fernando" class="footer-logo" />
+            <p class="footer-tagline">Let’s connect and build something amazing together!</p>
         </div>
+
+        <div class="footer-middle">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-nav">
+                <li><a href="#hero" class="footer-link">Home</a></li>
+                <li><a href="#about" class="footer-link">About</a></li>
+                <li><a href="#skills" class="footer-link">Skills</a></li>
+                <li><a href="#projects" class="footer-link">Projects</a></li>
+                <li><a href="#education" class="footer-link">Education</a></li>
+                <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-right">
+            <h4 class="footer-title">Connect</h4>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/sashan-fernando-b91a71235" class="footer-icon" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Sashan2002" class="footer-icon" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:samithasashan2002@gmail.com" class="footer-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Sashan Fernando. All rights reserved.</p>
     </div>
 </footer>
 
@@ -685,12 +728,12 @@
     });
 
     // Form submission (prevent default for demo)
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! This is a demo form, so no message was actually sent.');
-        contactForm.reset();
-    });
+    // const contactForm = document.querySelector('.contact-form');
+    // contactForm.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     alert('Thank you for your message! This is a demo form, so no message was actually sent.');
+    //     contactForm.reset();
+    // });
 </script>
 
 <script>
