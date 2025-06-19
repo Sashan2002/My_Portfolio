@@ -147,11 +147,11 @@
             <h2 class="section-title">Technical Skills</h2>
 
             <div class="skills-view-toggle" style="text-align: center; margin-bottom: 2rem;">
-                <button id="toggleSkillView" class="switch-btn">Switch to Icon View</button>
+                <button id="toggleSkillView" class="switch-btn">Switch to Text View</button>
             </div>
 
             <!-- Text View -->
-            <div class="skills-container animate" id="textSkillsView">
+            <div class="skills-container animate" id="textSkillsView" style="display: none;">
                 <div class="skill-category">
                     <h3 class="skill-category-title">Frontend</h3>
                     <div class="skill-list">
@@ -211,7 +211,7 @@
             </div>
 
             <!-- Icon View -->
-            <div class="skills-container animate" id="iconSkillsView" style="display: none;">
+            <div class="skills-container animate" id="iconSkillsView" >
                 <div class="skill-category">
                     <h3 class="skill-category-title">Frontend</h3>
                     <div class="skill-list">
@@ -678,21 +678,24 @@
 
 <script>
     const toggleBtn = document.getElementById("toggleSkillView");
-    const textSkills = document.getElementById("textSkillsView");
     const iconSkills = document.getElementById("iconSkillsView");
+    const textSkills = document.getElementById("textSkillsView");
+    
 
     let showingIcons = false;
 
     toggleBtn.addEventListener("click", () => {
         showingIcons = !showingIcons;
         if (showingIcons) {
-            textSkills.style.display = "none";
-            iconSkills.style.display = "flex";
-            toggleBtn.textContent = "Switch to Text View";
-        } else {
             textSkills.style.display = "flex";
             iconSkills.style.display = "none";
             toggleBtn.textContent = "Switch to Icon View";
+            
+        } else {
+            
+            textSkills.style.display = "none";
+            iconSkills.style.display = "flex";
+            toggleBtn.textContent = "Switch to Text View";
         }
     });
 
