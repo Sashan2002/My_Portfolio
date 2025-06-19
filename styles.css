@@ -217,6 +217,7 @@ section {
     border: 5px solid var(--profile-border);
     box-shadow: 0 15px 30px var(--profile-shadow);
     transition: all 0.5s ease;
+    animation: bounceIn 1.5s ease-in-out forwards;
 }
 
 .hero-shape {
@@ -232,7 +233,10 @@ section {
     opacity: 0.5;
     transition: all 0.5s ease;
 }
-
+.hero-image-wrapper {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 /* Hover and Interaction Effects */
 .hero-image-wrapper:hover .profile-img {
     transform: scale(1.05);
@@ -1097,6 +1101,160 @@ body.dark-theme .progress {
     --social-bg-hover: rgba(67, 97, 238, 0.3);
     --social-icon-hover: rgba(255, 255, 255, 1);
 }
+
+
+/* Animate name letter by letter */
+.animate-letters span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.animate-letters span:nth-child(1) { animation-delay: 0s; }
+.animate-letters span:nth-child(2) { animation-delay: 0.1s; }
+.animate-letters span:nth-child(3) { animation-delay: 0.2s; }
+.animate-letters span:nth-child(4) { animation-delay: 0.3s; }
+.animate-letters span:nth-child(5) { animation-delay: 0.4s; }
+.animate-letters span:nth-child(6) { animation-delay: 0.5s; }
+.animate-letters span:nth-child(7) { animation-delay: 0.6s; }
+.animate-letters span:nth-child(8) { animation-delay: 0.7s; }
+.animate-letters span:nth-child(9) { animation-delay: 0.8s; }
+.animate-letters span:nth-child(10) { animation-delay: 0.9s; }
+.animate-letters span:nth-child(11) { animation-delay: 1s; }
+.animate-letters span:nth-child(12) { animation-delay: 1.1s; }
+.animate-letters span:nth-child(13) { animation-delay: 1.2s; }
+.animate-letters span:nth-child(14) { animation-delay: 1.3s; }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in from left */
+.hero-description,
+.hero-title,
+.greeting {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 1s forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Bounce-in profile image */
+.profile-img {
+    animation: bounceOut 1.5s ease-in-out forwards;
+    opacity: 100;
+}
+
+@keyframes bounceOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover effect on social icons */
+.social-link svg {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover svg {
+    transform: scale(1.3);
+    stroke: var(--primary);
+}
+
+
+/* Generic fade and move-up animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay helpers */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 span { animation-delay: calc(0.2s + 0.1s * var(--i)); } /* for name letters */
+.delay-3 { animation-delay: 1s; }
+.delay-4 { animation-delay: 1.2s; }
+.delay-5 { animation-delay: 1.4s; }
+.delay-6 { animation-delay: 1.6s; }
+.delay-7 { animation-delay: 1.8s; }
+
+/* Animate name letters */
+.animate-letters span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Assign index to each span */
+.animate-letters span:nth-child(1) { --i: 0; }
+.animate-letters span:nth-child(2) { --i: 1; }
+.animate-letters span:nth-child(3) { --i: 2; }
+.animate-letters span:nth-child(4) { --i: 3; }
+.animate-letters span:nth-child(5) { --i: 4; }
+.animate-letters span:nth-child(6) { --i: 5; }
+.animate-letters span:nth-child(7) { --i: 6; }
+.animate-letters span:nth-child(8) { --i: 7; }
+.animate-letters span:nth-child(9) { --i: 8; }
+.animate-letters span:nth-child(10) { --i: 9; }
+.animate-letters span:nth-child(11) { --i: 10; }
+.animate-letters span:nth-child(12) { --i: 11; }
+.animate-letters span:nth-child(13) { --i: 12; }
+.animate-letters span:nth-child(14) { --i: 13; }
+
+/* Profile image bounce */
+.hero-image-container.fade-up {
+    animation: bounceIn 1.2s ease-out forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
