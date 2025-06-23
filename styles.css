@@ -50,6 +50,7 @@ body.dark-theme header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+
 }
 
 .nav-container {
@@ -575,8 +576,16 @@ body.dark-theme .education-timeline::before {
     background-color: var(--light-card);
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: default;
 }
+.timeline-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
 
 body.dark-theme .timeline-content {
     background-color: var(--dark-card);
@@ -899,6 +908,8 @@ body.dark-theme .progress {
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    
+
 }
 
 .experience-card {
@@ -907,8 +918,18 @@ body.dark-theme .progress {
     background-color: var(--card-background);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: default;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .experience-card {
+  background-color: var(--dark-card);
 }
 
 .experience-card h3 {
