@@ -843,7 +843,7 @@ body.dark-theme .contact-info {
 }
 .contact-info p {
   margin: 0.5rem 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 .contact-form-container {
   flex: 1;
@@ -857,7 +857,7 @@ body.dark-theme .contact-info {
 }
 
 .contact-icon {
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 15px;
   color: var(--primary);
   margin-top: 5px;
