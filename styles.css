@@ -841,6 +841,10 @@ body.dark-theme .contact-info {
 body.dark-theme .contact-info {
   background-color: var(--dark-card);
 }
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
 .contact-form-container {
   flex: 1;
   min-width: 300px;
