@@ -591,17 +591,17 @@
 
     
 
-    <section id="contact" class="section-animate">
+    <!-- <section id="contact" class="section-animate">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-wrapper">
             
-            <!-- Contact Details Section -->
+          
             <div class="contact-info animate">
                 <h3 class="contact-subtitle">Contact Details</h3>
-                <p><i class="fas fa-envelope contact-icon"></i><strong>Email:</strong> <a href="mailto:samithasashan2002@gmail.com">samithasashan2002@gmail.com</a></p>
-                <p><i class="fas fa-phone contact-icon"></i><strong>Phone:</strong> +94 721362773</p>
-                <p><i class="fas fa-map-marker-alt contact-icon"></i><strong>Address:</strong> 105/6, De Mel Road, Lakshapathiya, Moratuwa, Sri Lanka</p>
+                <p><i class="fas fa-envelope contact-icon"></i><strong>Email:</strong> <br>samithasashan2002@gmail.com</a></p>
+                <p><i class="fas fa-phone contact-icon"></i><strong>Phone:</strong><br> +94 721362773</p>
+                <p><i class="fas fa-map-marker-alt contact-icon"></i><strong>Address:</strong> <br>105/6, De Mel Road, Lakshapathiya, Moratuwa, Sri Lanka</p>
 
                 
                 <div class="map-container">
@@ -621,7 +621,7 @@
 
             </div>
 
-            <!-- Contact Form Section -->
+           
             <div class="contact-form-container animate">
                 <form class="contact-form" action="https://formspree.io/f/mgvyedvp" method="POST">
                 <div class="form-group">
@@ -646,7 +646,82 @@
 
             </div>
         </div>
+    </section>  -->
+    <section id="contact" class="section-animate">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+
+            <div class="contact-wrapper">
+
+            
+                <div class="contact-info">
+                    <div class="info-block">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>105/6, De Mel Road, Lakshapathiya,<br>Moratuwa, Sri Lanka</p>
+                    </div>
+                    </div>
+
+                    <div class="info-block">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+94 721362773</p>
+                    </div>
+                    </div>
+
+                    <div class="info-block">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>samithasashan2002@gmail.com</p>
+                    </div>
+                    </div>
+
+                    <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63397.04641702179!2d79.8784936!3d6.7968774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1716630784846!5m2!1sen!2slk"
+                        width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="https://maps.app.goo.gl/EHcUNCcYLj6MXmu36" target="_blank" class="map-link">
+                        <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                    </a>
+                    </div>
+                </div>
+
+            
+            <div class="contact-form-container">
+                <form class="contact-form" action="https://formspree.io/f/mgvyedvp" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" class="form-textarea" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            </div>
+        </div>
     </section>
+
 
 </main>
 
